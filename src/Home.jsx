@@ -49,7 +49,7 @@ function Home() {
             </li>
             <li>
               <button onClick={() => navigate(`/skills`)} className="button">
-                <a>Skill</a>
+                <a>What I Know</a>
               </button>
             </li>
             <li>
