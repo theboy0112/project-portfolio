@@ -12,15 +12,16 @@ import "./App.css";
 import "./flipcard.css";
 
 
+
 function Contact() {
   return (
     <div className="flip-card-container">
       <div className="flip-card">
         
         <div className="flip-card-inner">
-          <div className="flip-card-front"> <img src={card}/></div>
+          <div className="flip-card-front"><img src={card}/></div>
          
-          <div className="flip-card-back">
+          <div style={{backgroundImage: `url("/bgg.jpg")`}} className="flip-card-back">
             <ul className="contact-info">
               <li>
                 <img src={location} />
@@ -38,7 +39,6 @@ function Contact() {
               <li>
                 <img src={li} />
               </li>
-
               <button
                 onClick={() =>
                   window.open(
@@ -69,7 +69,7 @@ function Contact() {
                   window.open("https://discord.gg/DZCP34ST", "_blank")
                 }
               >
-                Join Server
+                Discord Server
               </button>
             </ul>
           </div>

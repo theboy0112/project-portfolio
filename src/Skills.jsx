@@ -8,6 +8,7 @@ import php from "./assets/php.png";
 import node from "./assets/node.png";
 import express from "./assets/express.png";
 import as from "./assets/as.png";
+import mysql from "./assets/mysqll.png";
 import "./cards.css";
 
 function Skills() {
@@ -59,10 +60,16 @@ function Skills() {
       title:
         "A Utility-first CSS framework for fast and responsive web design.",
     },
+     {
+      img: mysql,
+      title:
+         "It stores and manages data using tables, allowing for efficient data retrieval using SQL (Structured Query Language).",
+    },
   ];
 
   return (
-    <div className="skills-wrapper">
+    <div className="skills">
+    <div  className="skills-wrapper">
       <div className={`cards-description ${hoveredTitle ? "visible" : ""}`}>
         <h1>{hoveredTitle}</h1>
       </div>
@@ -82,6 +89,7 @@ function Skills() {
           </li>
         ))}
       </ul>
+    </div>
     </div>
   );
 }
