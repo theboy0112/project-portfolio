@@ -1,53 +1,77 @@
 import React, { useRef, useEffect } from "react";
 import gmail from "./assets/gmail.png";
 import at from "./assets/at.png";
-import dc from "./assets/dc.png";
-import tel from "./assets/tel.png";
+import contact from "./assets/contact.png";
+import dcc from "./assets/dcc.png";
+import email from "./assets/email.png";
+import li from "./assets/li.png";
+import card from "./assets/card.png";
+import gh from "./assets/gh.png";
+import location from "./assets/location.png";
 import "./App.css";
 import "./flipcard.css";
 import { useNavigate } from "react-router-dom";
-import Typed from "typed.js";
 
 function Contact() {
-  const navigate = useNavigate();
-
   return (
     <div className="flip-card-container">
       <div className="flip-card">
+        
         <div className="flip-card-inner">
-          <div className="flip-card-front">
-            <img src={at} />
-          </div>
+          <div className="flip-card-front"> <img src={card}/></div>
+         
           <div className="flip-card-back">
-            <h5>clifboycabrera12@gmail.com</h5>
-          </div>
-        </div>
-      </div>
+            <ul className="contact-info">
+              <li>
+                <img src={location} />
+              </li>
+              <li>777 CALAPE BOHOL</li>
+              <li>
+                <img src={contact} />
+              </li>
+              <li>+63 991232132</li>
 
-      <div className="flip-card">
-        <div className="flip-card-inner">
-          <div className="flip-card-front">
-            <img src={dc} />
-          </div>
-          <div className="flip-card-back">
-            <button
-              onClick={() =>
-                window.open("https://discord.gg/DZCP34ST", "_blank")
-              }
-            >
-              Join Server
-            </button>
-          </div>
-        </div>
-      </div>
+              <li>
+                <img src={email} />
+              </li>
+              <li>clifboycabrera12@gmail.com</li>
+              <li>
+                <img src={li} />
+              </li>
 
-      <div className="flip-card">
-        <div className="flip-card-inner">
-          <div className="flip-card-front">
-            <img src={tel} />
-          </div>
-          <div className="flip-card-back">
-            <h5>Smart: 0909090912</h5>  
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://www.linkedin.com/in/clifbelle-cabrera-676150372/",
+                    "_blank"
+                  )
+                }
+              >
+                LinkedIn
+              </button>
+              <li>
+                <img src={gh} />
+              </li>
+
+              <button
+                onClick={() =>
+                  window.open("https://github.com/theboy0112", "_blank")
+                }
+              >
+                Github
+              </button>
+              <li>
+                <img src={dcc} />
+              </li>
+
+              <button
+                onClick={() =>
+                  window.open("https://discord.gg/DZCP34ST", "_blank")
+                }
+              >
+                Join Server
+              </button>
+            </ul>
           </div>
         </div>
       </div>

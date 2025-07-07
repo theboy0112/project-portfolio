@@ -10,6 +10,7 @@ import node from "./assets/node.png";
 import express from "./assets/express.png";
 import as from "./assets/as.png";
 import "animate.css";
+import "./cards.css";
 
 function Skills() {
   return (

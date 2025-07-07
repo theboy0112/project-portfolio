@@ -9,41 +9,49 @@ import l from "./assets/l.png";
 import i from "./assets/i.png";
 import t from "./assets/t.png";
 import gh from "./assets/gh.png";
+import skills from "./assets/skills.png";
+import project from "./assets/project.png";
 import inn from "./assets/in.png";
+import home from "./assets/home.png";
+import about from "./assets/about.png";
+import contact from "./assets/contact.png";
 import "./App.css";
 import "animate.css";
 
 function Home() {
   return (
     <div className="home-background">
-      
       <div style={{ backgroundColor: "transparent" }}>
         <nav>
-          <ul>
-            <li>
+          <ul className="nav-list">
+            <li className="nav-item">
               <a href="#home" className="button">
-                Home
+                <img src={home} alt="Home" />
+                <span className="label">Home</span>
               </a>
             </li>
-             <li>
+            <li className="nav-item">
               <a href="#profile" className="button">
-                About
+                <img src={about} alt="Profile" />
+                <span className="label">Profile</span>
               </a>
             </li>
-            <li>
+            <li className="nav-item">
               <a href="#project" className="button">
-                Project
+                <img src={project} alt="Project" />
+                <span className="label">Projects</span>
               </a>
             </li>
-            <li>
+            <li className="nav-item">
               <a href="#skills" className="button">
-                What I Know
+                <img src={skills} alt="Skills" />
+                <span className="label">Skills</span>
               </a>
             </li>
-           
-            <li>
+            <li className="nav-item">
               <a href="#contact" className="button">
-                Contact
+                <img src={contact} alt="Contact" />
+                <span className="label">Contact</span>
               </a>
             </li>
           </ul>
@@ -53,7 +61,6 @@ function Home() {
       <br />
 
       <div className="icons-container">
-       
         <button
           className="icons-gh animate__animated animate__backInDown"
           style={{ backgroundColor: "transparent" }}
@@ -71,4 +78,4 @@ function Home() {
   );
 }
 
-export default Home; 
+export default Home;
