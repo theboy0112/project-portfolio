@@ -9,73 +9,66 @@ import php from "./assets/php.png";
 import node from "./assets/node.png";
 import express from "./assets/express.png";
 import as from "./assets/as.png";
-import bs from "./assets/bs.png";
-import { useNavigate } from "react-router-dom";
+import "animate.css";
+
 function Skills() {
-  const navigate = useNavigate();
   return (
-    <div className="skills-container">
-       <div style={{}} className="div-home">
-      <button
-        onClick={() => navigate(`/`)}
-        style={{
-          position: "absolute",
-          top: "2%",
-          left: "2%",
-          fontSize: "30px",
-          backgroundColor: "transparent",
-          border: "none",
-          color: "#1b3356",
-          cursor: "pointer",
-        }}
-      >
-        Home
-      </button>
-      <card className="card">
-        {" "}
-        <img src={javaaa} />
-      </card>
-      <card className="card">
-        {" "}
+    <ul className="cards-container">
+      <li className="cards">
+        <span></span>
+        <span></span>
+        <span></span>
         <img src={javaa} />
-      </card>
-      <card className="card">
-        {" "}
+      </li>
+      <li className="cards">
+        <span></span>
+        <span></span>
+        <span></span>
         <img src={react} />
-      </card>
-      <card className="card">
-        {" "}
+      </li>
+      <li className="cards">
+        <span></span>
+        <span></span>
+        <span></span>
         <img src={nest} />
-      </card>
-      <card className="card">
-        {" "}
+      </li>
+      <li className="cards">
+        <span></span>
+        <span></span>
+        <span></span>
         <img src={php} />
-      </card>
-      <br></br>
-      <br></br>
-      <br></br>
-      <card className="card">
-        {" "}
+      </li>
+      <li className="cards">
+        <span></span>
+        <span></span>
+        <span></span>
         <img src={node} />
-      </card>
-      <card className="card">
-        {" "}
+      </li>
+      <li className="cards">
+        <span></span>
+        <span></span>
+        <span></span>
         <img src={express} />
-      </card>
-      <card className="card">
-        {" "}
+      </li>
+      <li className="cards">
+        <span></span>
+        <span></span>
+        <span></span>
         <img src={as} />
-      </card>
-      <card className="card">
-        {" "}
-        <img src={bs} />
-      </card>
-      <card className="card">
-        {" "}
+      </li>
+      <li className="cards">
+        <span></span>
+        <span></span>
+        <span></span>
+        <img src={javaaa} />
+      </li>
+      <li className="cards">
+        <span></span>
+        <span></span>
+        <span></span>
         <img src={tailwind} />
-      </card>
-    </div>
-    </div>
+      </li>
+    </ul>
   );
 }
 

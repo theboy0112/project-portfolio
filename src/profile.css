@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+.column {
+    color: black;
+    float: left;
+  width: 50%;
+  padding: 10px;
+  height: 500px; 
+}
+.row:after{
+    
+    display: table;
+    clear: both;
+}
