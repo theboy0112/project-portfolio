@@ -8,7 +8,7 @@
   display: flex;
   height: 100%;
   padding: 20px;
-  background: #d17a7a;
+  background-color: transparent;
   border-radius: 15px;
   gap: 30px;
 }
