@@ -10,11 +10,42 @@ import education from "./assets/education.png";
 import experience from "./assets/experience.png";
 
 function Profile() {
+  const typedRef = useRef(null);
+  const soundRef = useRef(null);
+
+  useEffect(() => {
+    const playSound = () => {
+      if (soundRef.current) {
+        soundRef.current.currentTime = 0;
+        soundRef.current.play();
+      }
+    };
+
+    const typed = new Typed(typedRef.current, {
+      strings: ["Clifbelle Cabrera"],
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 1500,
+      loop: true,
+      showCursor: false,
+      preStringTyped: playSound,
+      onStringTyped: playSound,
+      onTypingPaused: () => {},
+      onTypingResumed: playSound,
+    });
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
   return (
     <div className="row">
       <div className="left-column">
         <img src={boy} alt="Profile" />
-        <h2>Clifbelle Cabrera</h2>
+        <h2>
+          <span ref={typedRef}></span>
+        </h2>
         <h2>Aspiring Frontend Developer</h2>
         <h3>
           Aspiring Frontend Developer and 4th year Computer Science student
@@ -28,7 +59,7 @@ function Profile() {
         <div>
           <img src={education} alt="Education" /> <h1>Education</h1>
           <ul>
-            <h3>Computer Science Student</h3>
+            <h3>4th year Computer Science Student</h3>
           </ul>
         </div>
         <br></br>

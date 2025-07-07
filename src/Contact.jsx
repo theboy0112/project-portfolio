@@ -10,7 +10,7 @@ import gh from "./assets/gh.png";
 import location from "./assets/location.png";
 import "./App.css";
 import "./flipcard.css";
-import { useNavigate } from "react-router-dom";
+
 
 function Contact() {
   return (
