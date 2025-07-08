@@ -19,7 +19,7 @@ function Contact() {
       <div className="flip-card">
         
         <div className="flip-card-inner">
-          <div className="flip-card-front"><img src={card}/></div>
+          <div className="flip-card-front">Calling Card</div>
          
           <div  className="flip-card-back">
             <ul className="contact-info">
