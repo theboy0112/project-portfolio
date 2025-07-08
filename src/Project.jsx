@@ -5,8 +5,11 @@ import sb from "./assets/sp.jpg";
 import as from "./assets/as.png";
 import php from "./assets/php.png";
 import bbp from "./assets/bbp.png";
+import dod from "./assets/dod.png";
+import qg from "./assets/qg.png";
 import react from "./assets/react.png";
 import bone from "./assets/bone.png";
+import smackies from "./assets/smackies.png";
 import mysqll from "./assets/mysqll.png";
 import dangerous from "./assets/dangerous.png";
 import "./project.css";
@@ -16,7 +19,7 @@ function Project() {
   return (
     <div class="card-container">
         <div class="card">
-            <img class="profile-pic" src={bbp} alt="Food delivery app" />
+            <img class="profile-pic" src={smackies} alt="Food delivery app" />
             <div class="card-content">
                 <div>
                     <h4>Smackies Ordering & Delivery App</h4>
@@ -39,7 +42,7 @@ function Project() {
         </div>
 
         <div class="card">
-            <img class="profile-pic" src={bbp} alt="Billing system" />
+            <img class="profile-pic" src={bone} alt="Billing system" />
             <div class="card-content">
                 <div>
                     <h4>Boheco Billing</h4>
@@ -57,7 +60,7 @@ function Project() {
         </div>
 
         <div class="card">
-            <img class="profile-pic" src={bbp} alt="AI detection" />
+            <img class="profile-pic" src={dod} alt="AI detection" />
             <div class="card-content">
                 <div>
                     <h4>Dangerous Object Detection App</h4>
@@ -80,7 +83,7 @@ function Project() {
         </div>
 
         <div class="card">
-            <img class="profile-pic" src={bbp} alt="Gas distribution system" />
+            <img class="profile-pic" src={qg} alt="Gas distribution system" />
             <div class="card-content">
                 <div>
                     <h4>QuickGas MIS</h4>
