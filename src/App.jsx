@@ -1,5 +1,6 @@
 import Home from "./Home.jsx";
 import Contact from "./Contact.jsx";
+import Contactt from "./Contactt.jsx";
 import Profile from "./Profile.jsx";
 import Project from "./Project.jsx";
 import Skills from "./Skills.jsx";
@@ -24,6 +25,9 @@ function App() {
       </section>
       <section id="contact">
         <Contact />
+      </section>
+      <section id="contactt">
+        <Contactt />
       </section>
     </div>
   );

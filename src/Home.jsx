@@ -54,6 +54,12 @@ function Home() {
                 <span className="label">Contact</span>
               </a>
             </li>
+            <li className="nav-item">
+              <a href="#contactt" className="button">
+                <img src={contact} alt="Contactt" />
+                <span className="label">Contactt</span>
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
