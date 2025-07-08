@@ -21,7 +21,7 @@ function Contact() {
         <div className="flip-card-inner">
           <div className="flip-card-front"><img src={card}/></div>
          
-          <div style={{backgroundImage: `url("/bgg.jpg")`}} className="flip-card-back">
+          <div  className="flip-card-back">
             <ul className="contact-info">
               <li>
                 <img src={location} />
