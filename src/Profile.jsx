@@ -42,7 +42,7 @@ function Profile() {
   return (
     <div className="row">
       <div className="left-column">
-        <img src={boy} alt="Profile" />
+        <img src={boyyy} alt="Profile" />
         <h2>
           <span ref={typedRef}></span>
         </h2>
@@ -59,14 +59,14 @@ function Profile() {
         <div>
           <img src={education} alt="Education" /> <h1>Education</h1>
           <ul>
-            <h3>4th year Computer Science Student</h3>
+            <h2>4th year Computer Science Student</h2>
           </ul>
         </div>
         <br></br>
         <div>
           <img src={experience} alt="Experience" /> <h1>Experience</h1>
           <ul>
-            <h3>Student Intern at Allied Care Experts Medical Center Bohol</h3>
+            <h2>Student Intern at Allied Care Experts Medical Center Bohol</h2>
           </ul>
         </div>
       </div>
