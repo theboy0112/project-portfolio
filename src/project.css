@@ -1,26 +1,21 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .card {
   position: relative;
+  z-index: 1;
   background: white;
-  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease;
   border: 1px solid #e2e8f0;
 }
-
+.card-container {
+  display: flex;
+  padding-top: 700px;
+  border: solid red;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .card:hover {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
@@ -32,9 +27,14 @@
   object-fit: cover;
   display: block;
 }
-
+@media (max-width: 768px) {
+  .section-wrapper {
+    padding-top: 100px;
+  }
+}
 .card-content {
   position: absolute;
+  z-index: 2;
   inset: 0;
   background: rgba(255, 255, 255, 0.98);
   padding: 1.5rem;

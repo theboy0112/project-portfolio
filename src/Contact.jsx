@@ -1,13 +1,8 @@
-import React, { useRef, useEffect } from "react";
-import gmail from "./assets/gmail.png";
-import at from "./assets/at.png";
 import contact from "./assets/contact.png";
 import dcc from "./assets/dcc.png";
 import email from "./assets/email.png";
 import li from "./assets/li.png";
-import card from "./assets/card.png";
 import gh from "./assets/gh.png";
-import location from "./assets/location.png";
 import "./App.css";
 import "./flipcard.css";
 
