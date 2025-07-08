@@ -1,9 +1,27 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
-import "./App.css";
-import './flipcard.css';
+
+import "./contact.css"; 
+import Typed from "typed.js";
+
 function Contact() {
+  const typedRef = useRef(null);
   const form = useRef();
+
+  useEffect(() => {
+    const typed = new Typed(typedRef.current, {
+      strings: ["Get in touch!", "Send me a message!", "Let's connect!", "Contact me!"],
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 1500,
+      loop: true,
+      showCursor: false,
+    });
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -14,8 +32,18 @@ function Contact() {
       return;
     }
 
+    // Disable button during submission
+    const submitButton = form.current.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+
     emailjs
-      .sendForm("service_e5ngyy6", "template_yn8kixe", form.current, "dcauHtnGsdkNIMdna")
+      .sendForm(
+        "service_e5ngyy6",
+        "template_yn8kixe",
+        form.current,
+        "dcauHtnGsdkNIMdna"
+      )
       .then(
         () => {
           alert("✅ Message sent successfully!");
@@ -25,21 +53,63 @@ function Contact() {
           alert("❌ Failed to send message.");
           console.error(error);
         }
-      );
+      )
+      .finally(() => {
+        // Re-enable button
+        submitButton.disabled = false;
+        submitButton.textContent = "Send Message";
+      });
   };
 
   return (
-    <form
-      ref={form}
-      onSubmit={sendEmail}
-      style={{ maxWidth: "400px", margin: "2rem auto", display: "flex", flexDirection: "column", gap: "10px" }}
-    >
-      <input type="text" name="from_name" placeholder="Your Name" required />
-      <input type="email" name="reply_to" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <input type="text" name="honeypot" style={{ display: "none" }} />
-      <button type="submit">Send</button>
-    </form>
+    <div className="contact-container">
+      {/* Typed Text Section */}
+      <div className="typed-section">
+        <h1 className="typed-title">
+          <span ref={typedRef}></span>
+        </h1>
+      </div>
+
+      {/* Form Section */}
+      <div className="form-section">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="contact-form"
+        >
+          <input
+            type="text"
+            name="from_name"
+            placeholder="Your Name"
+            className="form-input"
+            required
+          />
+          <input
+            type="email"
+            name="reply_to"
+            placeholder="Your Email"
+            className="form-input"
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            className="form-textarea"
+            required
+          ></textarea>
+          <input 
+            type="text" 
+            name="honeypot" 
+            className="honeypot" 
+            tabIndex="-1" 
+            autoComplete="off"
+          />
+          <button type="submit" className="submit-button">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
   );
 }
 
