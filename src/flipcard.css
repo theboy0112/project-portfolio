@@ -134,4 +134,27 @@
     padding: 10px 15px;
     font-size: 0.9rem;
   }
+.from_name {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.reply-to {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.message {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  min-height: 150px;
+  resize: vertical;
+  width: 100%;
+}
+
 }

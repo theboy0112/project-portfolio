@@ -23,10 +23,7 @@ function Contact() {
          
           <div  className="flip-card-back">
             <ul className="contact-info">
-              <li>
-                <img src={location} />
-              </li>
-              <li>777 CALAPE BOHOL</li>
+            
               <li>
                 <img src={contact} />
               </li>

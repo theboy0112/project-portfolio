@@ -12,6 +12,7 @@ function Contact() {
       alert("Bot detected. Message not sent.");
       return;
     }
+
     emailjs
       .sendForm("service_e5ngyy6", "template_yn8kixe", form.current, "dcauHtnGsdkNIMdna")
       .then(

@@ -1,19 +1,9 @@
-import React from "react";
-import sad from "./assets/sad.png";
-import homebg from "./assets/portfolio.png";
-import p from "./assets/p.png";
-import o from "./assets/o.png";
-import r from "./assets/r.png";
-import f from "./assets/f.png";
-import l from "./assets/l.png";
-import i from "./assets/i.png";
-import t from "./assets/t.png";
-import gh from "./assets/gh.png";
 import skills from "./assets/skills.png";
 import project from "./assets/project.png";
 import inn from "./assets/in.png";
 import home from "./assets/home.png";
 import about from "./assets/about.png";
+import message from "./assets/message.png";
 import contact from "./assets/contact.png";
 import "./App.css";
 import "animate.css";
@@ -51,13 +41,13 @@ function Home() {
             <li className="nav-item">
               <a href="#contact" className="button">
                 <img src={contact} alt="Contact" />
-                <span className="label">Contact</span>
+                <span className="label">Contacts</span>
               </a>
             </li>
             <li className="nav-item">
               <a href="#contactt" className="button">
-                <img src={contact} alt="Contactt" />
-                <span className="label">Contactt</span>
+                <img src={message} alt="Contactt" />
+                <span className="label">Email</span>
               </a>
             </li>
           </ul>
