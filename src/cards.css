@@ -6,8 +6,9 @@
 
 .skills-wrapper {
   position: relative;
-  padding-top: 40px;
+  padding-top: 150px;
   max-width: 1200px;
+  overflow: hidden;
   margin: 0 auto;
 }
 

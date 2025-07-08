@@ -1,109 +1,61 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  min-height: 100vh;
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "menu content"
+    "footer footer";
+  grid-template-columns: 1fr 4fr;
+  gap: 10px;
+  background-color: #272a2e;
   padding: 20px;
-  background-color: transparent;
-  border-radius: 15px;
+  min-height: 10vh;
+  font-size: 1.5rem;
 }
 
-.left-column,
-.right-column {
-  flex: 1;
-  padding: 20px;
-  text-align: left;
+.container > div {
+  background-color: rgba(175, 168, 168, 0.8);
+  padding: 2px;
+  text-align: start;
+  color: #fff;
+  border-radius: 3px;
 }
 
-.left-column img {
-  width: 100%;
-  max-width: 400px;
+.container > div.header {
+  grid-area: header;
+  text-align: center;
 }
 
-.right-column h1 {
-  font-size: 2.5rem;
+.container > div.menu {
+  grid-area: menu;
+  text-align: center;
 }
 
-.right-column h2 {
-  font-size: 2rem;
-  font-style: italic;
-  line-height: 1.6;
-  display: flex;
-  align-items: center;
+.container > div.content {
+  grid-area: content;
 }
 
-.right-column img {
-  max-width: 100px;
-  height: auto;
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .row {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-  }
-
-  .left-column,
-  .right-column {
-    flex: 1 1 100%;
-    text-align: center;
-    padding: 15px;
-  }
-
-  .left-column img {
-    max-width: 300px;
-  }
-
-  .right-column img {
-    max-width: 100px;
-    margin: 0 auto 15px;
-  }
-
-  .right-column h1,
-  .right-column h2,
-  .left-column h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-  }
+.container > div.footer {
+  grid-area: footer;
+  text-align: center;
+  font-size: 1rem;
 }
 
 @media (max-width: 768px) {
-  .row {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
+  .container {
+    grid-template-areas:
+      "header"
+      "menu"
+      "content"
+      "footer";
+    grid-template-columns: 1fr;
   }
 
-  .left-column,
-  .right-column {
-    width: 90%;
-    text-align: center;
+  .container {
+    font-size: 1.2rem;
     padding: 10px;
   }
 
-  .left-column img {
-    width: 80%;
-    max-width: 300px;
-  }
-
-  .right-column img {
-    width: 100%;
-    max-width: 80px;
-    height: auto;
-    margin: 0 auto 15px;
-  }
-
-  .right-column h1,
-  .right-column h2,
-  .left-column h2 {
-    font-size: clamp(1.5rem, 4vw, 2rem);
+  .container > div {
+    text-align: center;
   }
 }

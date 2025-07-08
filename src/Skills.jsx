@@ -88,7 +88,6 @@ function Skills() {
         <div className={`cards-description ${hoveredTitle ? "visible" : ""}`}>
           <h1>{hoveredTitle}</h1>
         </div>
-
         <ul className="cards-container">
           {cards.map((card, index) => (
             <li
