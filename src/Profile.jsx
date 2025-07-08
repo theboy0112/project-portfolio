@@ -8,7 +8,7 @@ import gh from "./assets/gh.png";
 import iii from "./assets/iii.png";
 import education from "./assets/education.png";
 import experience from "./assets/experience.png";
-
+import bgg from "./assets/bg.jpg";
 function Profile() {
   const typedRef = useRef(null);
   const soundRef = useRef(null);
@@ -48,10 +48,15 @@ function Profile() {
         </h2>
         <h2>Aspiring Frontend Developer</h2>
         <h3>
-          Aspiring Frontend Developer and 4th year Computer Science student
-          passionate about building responsive, user-friendly web applications.
-          Skilled in HTML, CSS, JavaScript, and React, with a strong foundation
-          in software development and a keen eye for design.
+          An aspiring Frontend Developer and a 4th-year Computer Science
+          student, passionate about creating responsive, user-friendly web
+          applications. I have hands-on experience with HTML, CSS, JavaScript,
+          and React, and a solid foundation in software development principles.
+          With a keen eye for clean and functional design, I enjoy turning ideas
+          into interactive, visually appealing digital experiences. I’m
+          constantly learning and staying updated with the latest web
+          technologies to build modern, accessible, and performance-driven
+          applications.
         </h3>
       </div>
 
@@ -59,10 +64,10 @@ function Profile() {
         <div>
           <img src={education} alt="Education" /> <h1>Education</h1>
           <ul>
-            <h2>4th year Computer Science Student</h2>
+            <h2>Computer Science Student</h2>
           </ul>
         </div>
-        <br></br>
+      
         <div>
           <img src={experience} alt="Experience" /> <h1>Experience</h1>
           <ul>
