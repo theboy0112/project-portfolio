@@ -6,14 +6,13 @@
     "footer footer";
   grid-template-columns: 1fr 4fr;
   gap: 10px;
-  background-color: #272a2e;
+  background-color: transparent;
   padding: 20px;
   min-height: 10vh;
   font-size: 1.5rem;
 }
-
 .container > div {
-  background-color: rgba(175, 168, 168, 0.8);
+  background-color: transparent;
   padding: 2px;
   text-align: start;
   color: #fff;

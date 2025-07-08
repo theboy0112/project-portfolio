@@ -36,7 +36,7 @@ function Profile() {
   return (
     <div className="container">
       <div className="menu">
-        <img src={boyyy} /> <span ref={typedRef}></span>
+        <img src={boyyy} /><br></br><span ref={typedRef}></span>
       </div>
       <div className="content">
         I am a 4th-year Computer Science student and an aspiring Front-End
