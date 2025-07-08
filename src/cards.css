@@ -3,16 +3,19 @@
   height: 100%;
   padding: 0 10px;
 }
+
 .skills-wrapper {
   position: relative;
-  padding-top: 500px;
-  border: solid red;
+  width: 100%;
+  padding: 20px;
+  padding-top: 200px;
   max-width: 1200px;
   overflow: hidden;
   margin: 0 auto;
 }
 
 .cards-description {
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;

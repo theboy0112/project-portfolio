@@ -9,11 +9,10 @@
 }
 .card-container {
   display: flex;
-  padding-top: 700px;
-  border: solid red;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1.5rem;
-  max-width: 1200px;
+  max-width: 1  1200px;
+  width: 100%;
   margin: 0 auto;
 }
 .card:hover {
