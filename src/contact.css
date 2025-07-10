@@ -1,7 +1,6 @@
 .contact-container {
   min-height: 100vh;
-  padding: 2rem 1rem;
-  background: linear-gradient(135deg, #2d3c7e 0%, #764ba2 100%);
+  padding: 1rem 1rem;
   font-family: 'Arial', sans-serif;
 }
 

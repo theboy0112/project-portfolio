@@ -53,9 +53,7 @@ function Home() {
           </ul>
         </nav>
       </div>
-
       <br />
-
       <div className="icons-container">
         <button
           className="icons-gh animate__animated animate__backInDown"

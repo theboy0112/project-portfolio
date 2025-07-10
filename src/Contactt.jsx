@@ -10,7 +10,7 @@ function Contact() {
 
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
-      strings: ["Get in touch!", "Send me a message!", "Let's connect!", "Contact me!"],
+      strings: ["Get in touch"],
       typeSpeed: 100,
       backSpeed: 50,
       backDelay: 1500,
