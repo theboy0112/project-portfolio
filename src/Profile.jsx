@@ -11,7 +11,7 @@ function Profile() {
 
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
-      strings: ["Hello, I'm Clifbelle!", "Welcome to my profile."],
+      strings: ["Hello, I'm Clifbelle!"],
       typeSpeed: 50,
       backSpeed: 25,
       loop: true,
@@ -29,30 +29,30 @@ function Profile() {
   }, []);
 
   return (
-    <div className="container">
-      <img src={boyyy} alt="Profile" />
+    <div className="container profile-responsive">
+      <div className="profile-img-wrapper">
+        <img src={boyyy} alt="Profile" className="profile-img" />
+      </div>
       <div className="menu">
         <span style={{ color: "black" }} ref={typedRef}></span>
-        <span>
-          <p style={{ color: "black" }}>
-            Aspiring frontend developer passionate about crafting clean and
-            interactive user interfaces.
-          </p>
-        </span>
+
       </div>
-      <div>
-        <h4>
-          <img src={education} alt="Education" /> &nbsp; Computer Science
+      <div className="calendar-wrapper">
+
+        <div className="calendar" ref={calendarRef}>
+          Loading contributions...
+        </div>
+        <h5>A passionate learner exploring programming, algorithms, and software development to solve real-world problems through technology.</h5>
+      </div>
+      <div className="profile-info">
+        <h4 className="profile-edu">
+          <img src={education} alt="Education" className="profile-icon" />  Computer Science
           Student
         </h4>
-        <h4>
-          <img src={experience} alt="Experience" /> &nbsp; Student Intern at
+        <h4 className="profile-exp">
+          <img src={experience} alt="Experience" className="profile-icon" />  Student Intern at
           Allied Care Experts Medical Center Bohol
         </h4>
-      </div>
-
-      <div className="calendar" ref={calendarRef}>
-        Loading contributions...
       </div>
     </div>
   );

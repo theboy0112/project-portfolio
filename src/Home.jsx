@@ -41,7 +41,7 @@ function Home() {
             <li className="nav-item">
               <a href="#contact" className="button">
                 <img src={contact} alt="Contact" />
-                <span className="label">Contacts</span>
+                <span className="label">Social</span>
               </a>
             </li>
             <li className="nav-item">

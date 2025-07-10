@@ -35,13 +35,12 @@ function Project() {
         <h5>
           BOHECO I Billing Portal is an online platform that lets customers
           easily view their electric bills, check account balances, and access
-          billing history.{" "}
+          billing history.
         </h5>
         <div className="card-buttons">
           <button>
             <img src={react} alt="react" />
           </button>
-          <br></br>
           <button
             className="waw"
             onClick={() =>

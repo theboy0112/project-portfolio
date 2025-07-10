@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import tailwind from "./assets/tailwind.png";
 import javaa from "./assets/javaa.png";
 import javaaa from "./assets/javaaa.png";
@@ -14,6 +14,13 @@ import "./cards.css";
 function Skills() {
   const [hoveredTitle, setHoveredTitle] = useState("");
   const [activeCard, setActiveCard] = useState(null);
+  const [isTouch, setIsTouch] = useState(false);
+
+  useEffect(() => {
+    setIsTouch(
+      ("ontouchstart" in window) || (navigator.maxTouchPoints > 0)
+    );
+  }, []);
 
   const cards = [
     {
@@ -82,14 +89,24 @@ function Skills() {
           <li
             className={`cards ${activeCard === index ? "active" : ""}`}
             key={index}
-            onClick={() => handleCardInteraction(index, card.title)}
+            onClick={() => {
+              if (isTouch) {
+                setActiveCard(activeCard === index ? null : index);
+                setHoveredTitle(activeCard === index ? "" : card.title);
+              }
+            }}
             onMouseEnter={() => {
-              if (window.matchMedia("(hover: hover)").matches) {
+              if (!isTouch) {
                 setHoveredTitle(card.title);
                 setActiveCard(index);
               }
             }}
-            onMouseLeave={handleMouseLeave}
+            onMouseLeave={() => {
+              if (!isTouch) {
+                setHoveredTitle("");
+                setActiveCard(null);
+              }
+            }}
           >
             <span></span>
             <span></span>
