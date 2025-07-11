@@ -17,6 +17,7 @@
   box-sizing: border-box;
 }
 .card {
+  margin-top: 50px;
   background: #232323;
   border-radius: 14px;
   overflow: hidden;
@@ -141,11 +142,13 @@
 
 @media (max-width: 768px) {
   .projects-section {
+    max-height: 100vh;
+    overflow-y: auto;
     padding: 16px 0;
   }
   .card-container {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    overflow-y: auto;
+    max-height: 80vh;
     padding: 12px;
   }
   .card-image {
@@ -177,10 +180,13 @@
 
 @media (max-width: 480px) {
   .projects-section {
+    max-height: 100vh;
+    overflow-y: auto;
     padding: 12px 0;
   }
   .card-container {
-    gap: 16px;
+    overflow-y: auto;
+    max-height: 70vh;
     padding: 8px;
   }
   .card {
