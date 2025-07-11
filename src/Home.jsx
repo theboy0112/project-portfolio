@@ -1,11 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import skills from "./assets/skills.png";
 import project from "./assets/project.png";
-import inn from "./assets/in.png";
 import home from "./assets/home.png";
 import about from "./assets/about.png";
 import message from "./assets/message.png";
-import contact from "./assets/contact.png";
 import Typed from "typed.js";
 import "./CSS/App.css";
 import "animate.css";
@@ -16,7 +14,7 @@ function Home() {
 
   useEffect(() => {
     typedInstance.current = new Typed(typedRef.current, {
-      strings: ["Hello, I'm Clifbelle!", "Computer Science Student", "Aspiring Frontend Developer"],
+      strings: ["Hello, I'm Clifbelle!", "Computer Science Student"],
       typeSpeed: 50,
       backSpeed: 25,
       loop: true,

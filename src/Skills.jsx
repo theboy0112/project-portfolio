@@ -7,6 +7,8 @@ import nest from "./assets/nest.png";
 import php from "./assets/php.png";
 import as from "./assets/as.png";
 import mysql from "./assets/mysqll.png";
+import graphql from "./assets/graphql.png";
+import prisma from "./assets/prisma.png";
 import "./CSS/skills.css";
 
 function Skills() {
@@ -66,6 +68,18 @@ function Skills() {
         "Utility-first CSS framework for rapidly building custom user interfaces with pre-defined classes.",
     },
     {
+      img: prisma,
+      title: "Prisma ORM",
+      description:
+        "a modern ORM (Object-Relational Mapping) tool that makes working with databases in JavaScript and TypeScript easier, providing type safety and powerful database access.",
+    },
+    {
+      img: graphql,
+      title: "GraphQL",
+      description:
+        "A query language for APIs that lets clients request exactly the data they need, making data fetching more efficient and flexible.",
+    },
+    {
       img: mysql,
       title: "MySQL Database",
       description:
@@ -106,9 +120,7 @@ function Skills() {
       <div className="skills-wrapper">
         <div className="description-container">
           <h3 className="skill-title">{hoveredTitle || "Select a skill"}</h3>
-          <p className="skill-description">
-            {hoveredDescription}
-          </p>
+          <p className="skill-description">{hoveredDescription}</p>
         </div>
         <div className="cards-container">
           {cards.map((card, index) => (
