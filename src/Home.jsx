@@ -1,3 +1,4 @@
+import React, { useEffect, useRef } from "react";
 import skills from "./assets/skills.png";
 import project from "./assets/project.png";
 import inn from "./assets/in.png";
@@ -5,10 +6,27 @@ import home from "./assets/home.png";
 import about from "./assets/about.png";
 import message from "./assets/message.png";
 import contact from "./assets/contact.png";
-import "./App.css";
+import Typed from "typed.js";
+import "./CSS/App.css";
 import "animate.css";
 
 function Home() {
+  const typedRef = useRef(null);
+  const typedInstance = useRef(null);
+
+  useEffect(() => {
+    typedInstance.current = new Typed(typedRef.current, {
+      strings: ["Hello, I'm Clifbelle!"],
+      typeSpeed: 50,
+      backSpeed: 25,
+      loop: true,
+    });
+
+    return () => {
+      typedInstance.current.destroy();
+    };
+  }, []);
+
   return (
     <div className="home-background">
       <div style={{ backgroundColor: "transparent" }}>
@@ -38,12 +56,7 @@ function Home() {
                 <span className="label">Skills</span>
               </a>
             </li>
-            <li className="nav-item">
-              <a href="#contact" className="button">
-                <img src={contact} alt="Contact" />
-                <span className="label">Social</span>
-              </a>
-            </li>
+
             <li className="nav-item">
               <a href="#contactt" className="button">
                 <img src={message} alt="Contactt" />
@@ -55,18 +68,7 @@ function Home() {
       </div>
       <br />
       <div className="icons-container">
-        <button
-          className="icons-gh animate__animated animate__backInDown"
-          style={{ backgroundColor: "transparent" }}
-          onClick={() =>
-            window.open(
-              "https://www.linkedin.com/in/clifbelle-cabrera-676150372/",
-              "_blank"
-            )
-          }
-        >
-          <img src={inn} />
-        </button>
+        <span style={{ color: "black" }} ref={typedRef}></span>
       </div>
     </div>
   );

@@ -30,6 +30,9 @@ section {
   height: 100%;
   justify-content: center;
 }
+.icons-container span{
+  font-size: 25px;
+}
 .box{
   flex: 1 1 300px
 }

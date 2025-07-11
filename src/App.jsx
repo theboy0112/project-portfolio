@@ -1,12 +1,11 @@
 import Home from "./Home.jsx";
-import Contact from "./Contact.jsx";
 import Contactt from "./Contactt.jsx";
 import Profile from "./Profile.jsx";
 import Project from "./Project.jsx";
 import Skills from "./Skills.jsx";
-import "./App.css";
-import "./index.css";
-import 'animate.css';
+import "./CSS/App.css";
+import "./CSS/index.css";
+import "animate.css";
 
 function App() {
   return (
@@ -14,7 +13,7 @@ function App() {
       <section id="home">
         <Home />
       </section>
-        <section id="profile">
+      <section id="profile">
         <Profile />
       </section>
       <section id="project">
@@ -22,9 +21,6 @@ function App() {
       </section>
       <section id="skills">
         <Skills />
-      </section>
-      <section id="contact">
-        <Contact />
       </section>
       <section id="contactt">
         <Contactt />

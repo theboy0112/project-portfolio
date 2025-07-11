@@ -1,45 +1,48 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  padding: 0;
-  line-height: 1.5;
   font-weight: 400;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #c0c0c0;
+  line-height: 1.5;
   color-scheme: light dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 html,
 body {
   margin: 0;
   padding: 0;
   height: 100%;
-  position: relative;
-  overflow: hidden;
+  overflow-y: auto;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  position: relative;
 }
-.skills {
-  width: 100%;
-  height: 100vh;
-  padding: 0 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+
 body::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: url("/bg.jpg") no-repeat center center/cover;
-  filter: blur(px);
+  filter: blur(5px);
   z-index: -1;
+}
+
+.section {
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-margin-top: 80px; 
+}
+
+.skills {
+  width: 100%;
 }
 
 a {

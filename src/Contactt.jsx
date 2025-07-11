@@ -1,7 +1,11 @@
 import React, { useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
-
-import "./contact.css"; 
+import contact from "./assets/contact.png";
+import dcc from "./assets/dcc.png";
+import email from "./assets/email.png";
+import li from "./assets/li.png";
+import gh from "./assets/gh.png";
+import "./CSS/contact.css";
 import Typed from "typed.js";
 
 function Contact() {
@@ -32,7 +36,6 @@ function Contact() {
       return;
     }
 
-    // Disable button during submission
     const submitButton = form.current.querySelector('button[type="submit"]');
     submitButton.disabled = true;
     submitButton.textContent = "Sending...";
@@ -55,7 +58,6 @@ function Contact() {
         }
       )
       .finally(() => {
-        // Re-enable button
         submitButton.disabled = false;
         submitButton.textContent = "Send Message";
       });
@@ -63,20 +65,14 @@ function Contact() {
 
   return (
     <div className="contact-container">
-      {/* Typed Text Section */}
       <div className="typed-section">
         <h1 className="typed-title">
           <span ref={typedRef}></span>
         </h1>
       </div>
 
-      {/* Form Section */}
       <div className="form-section">
-        <form
-          ref={form}
-          onSubmit={sendEmail}
-          className="contact-form"
-        >
+        <form ref={form} onSubmit={sendEmail} className="contact-form">
           <input
             type="text"
             name="from_name"
@@ -97,11 +93,11 @@ function Contact() {
             className="form-textarea"
             required
           ></textarea>
-          <input 
-            type="text" 
-            name="honeypot" 
-            className="honeypot" 
-            tabIndex="-1" 
+          <input
+            type="text"
+            name="honeypot"
+            className="honeypot"
+            tabIndex="-1"
             autoComplete="off"
           />
           <button type="submit" className="submit-button">
@@ -109,8 +105,28 @@ function Contact() {
           </button>
         </form>
       </div>
-    </div>
+   </div>
   );
 }
+      {/* <img src={li} />
+      <button
+        onClick={() =>
+          window.open(
+            "https://www.linkedin.com/in/clifbelle-cabrera-676150372/",
+            "_blank"
+          )
+        }
+      >
+        LinkedIn
+      </button>
+
+      <img src={gh} />
+
+      <button
+        onClick={() => window.open("https://github.com/theboy0112", "_blank")}
+      >
+        Github
+      </button> */}
+ 
 
 export default Contact;
