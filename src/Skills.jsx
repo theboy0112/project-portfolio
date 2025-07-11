@@ -87,21 +87,24 @@ function Skills() {
     },
   ];
 
+  // Only use active state for touch devices
   const handleCardClick = (index, card) => {
-    if (activeCard === index) {
-      setActiveCard(null);
-      setHoveredTitle("");
-      setHoveredDescription("");
-    } else {
-      setActiveCard(index);
-      setHoveredTitle(card.title);
-      setHoveredDescription(card.description);
+    if (isTouch) {
+      if (activeCard === index) {
+        setActiveCard(null);
+        setHoveredTitle("");
+        setHoveredDescription("");
+      } else {
+        setActiveCard(index);
+        setHoveredTitle(card.title);
+        setHoveredDescription(card.description);
+      }
     }
   };
 
+  // On desktop, just update the description on hover, don't set active
   const handleMouseEnter = (index, card) => {
     if (!isTouch) {
-      setActiveCard(index);
       setHoveredTitle(card.title);
       setHoveredDescription(card.description);
     }
@@ -109,7 +112,6 @@ function Skills() {
 
   const handleMouseLeave = () => {
     if (!isTouch) {
-      setActiveCard(null);
       setHoveredTitle("");
       setHoveredDescription("");
     }
@@ -125,7 +127,7 @@ function Skills() {
         <div className="cards-container">
           {cards.map((card, index) => (
             <li
-              className={`cards ${activeCard === index ? "active" : ""}`}
+              className={`cards ${isTouch && activeCard === index ? "active" : ""}`}
               key={index}
               onClick={() => handleCardClick(index, card)}
               onMouseEnter={() => handleMouseEnter(index, card)}

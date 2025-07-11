@@ -102,13 +102,10 @@ function Contact() {
           <button type="submit" className="submit-button">
             Send Message
           </button>
-        </form>
+        </form>     
       </div>
-   </div>
-  );
-}
-      {/* <img src={li} />
-      <button
+      <div className="social-icons">
+      <button className="social-iconsbutton"
         onClick={() =>
           window.open(
             "https://www.linkedin.com/in/clifbelle-cabrera-676150372/",
@@ -116,16 +113,19 @@ function Contact() {
           )
         }
       >
-        LinkedIn
+        <img src={li} />
       </button>
-
-      <img src={gh} />
-
-      <button
+      <button className="social-iconsbutton"
         onClick={() => window.open("https://github.com/theboy0112", "_blank")}
       >
-        Github
-      </button> */}
- 
+        <img src={gh} />
+      </button>
+
+      </div>
+    </div>
+  );
+}
+
+
 
 export default Contact;

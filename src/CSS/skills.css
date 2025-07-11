@@ -33,11 +33,10 @@
   margin: 20px;
   touch-action: manipulation;
 }
-
 .cards:hover {
   z-index: 10 !important;
   transform: rotate(-30deg) skew(25deg) scale(1.05);
-}
+} 
 
 .cards.active {
   z-index: 20 !important;
