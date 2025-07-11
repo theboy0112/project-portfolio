@@ -5,13 +5,19 @@
   padding: 30px;
   box-sizing: border-box;
   font-size: 1.5rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
   text-align: center;
   width: 100%;
   max-width: 500px;
+}
+
+.container-profile-responsive {
+  margin-bottom: 60px;
+  padding-bottom: 40px;
 }
 
 @media (max-width: 768px) {
@@ -25,6 +31,11 @@
     text-align: center;
     width: 100%;
     max-width: 100%;
+  }
+  
+  .container-profile-responsive {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
   }
 }
 
@@ -42,10 +53,15 @@
     width: 100%;
     max-width: 100%;
   }
+  
+  .container-profile-responsive {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+  }
 }
 
 .calendar-wrapper {
-  background: rgba(66, 57, 57, 0.9);
+  background: rgba(152, 163, 167, 0.9);
   padding: 10px;
   text-align: center;
   font-size: 16px;
@@ -59,9 +75,8 @@
   width: 100%;
   max-width: 500px;
 }
-
 .calendar {
-  border: #0369a1;
+  border: #dae2e6;
   text-align: center;
   max-width: 100%;
   margin: 1rem auto;
@@ -70,10 +85,11 @@
   box-sizing: border-box;
   width: 100%;
   overflow-x: auto;
+
 }
 
 .profile-info {
-  background: rgba(66, 57, 57, 0.9);
+  background: rgba(152, 163, 167, 0.9);
   padding: 20px;
   text-align: center;
   color: #1a1a1a;
@@ -142,7 +158,6 @@
     box-sizing: border-box;
   }
 }
-
 .calendar .contrib-footer,
 .calendar .js-yearly-contributions h2,
 .calendar .float-left,

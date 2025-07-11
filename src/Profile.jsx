@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
-import boyyy from "./assets/biboy.png";
 import education from "./assets/education.png";
 import experience from "./assets/experience.png";
 import "./CSS/profile.css";
+import "animate.css"
 
 function Profile() {
   const calendarRef = useRef(null);

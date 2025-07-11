@@ -14,7 +14,7 @@ function Home() {
 
   useEffect(() => {
     typedInstance.current = new Typed(typedRef.current, {
-      strings: ["Hello, I'm Clifbelle!", "Computer Science Student"],
+      strings: ["Hello, I'm Clifboy!", "Computer Science Student"],
       typeSpeed: 50,
       backSpeed: 25,
       loop: true,

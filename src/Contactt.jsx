@@ -14,7 +14,7 @@ function Contact() {
 
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
-      strings: ["Get in touch"],
+      strings: ["Get in touch", "Message me"],
       typeSpeed: 100,
       backSpeed: 50,
       backDelay: 1500,
@@ -70,7 +70,6 @@ function Contact() {
           <span ref={typedRef}></span>
         </h1>
       </div>
-
       <div className="form-section">
         <form ref={form} onSubmit={sendEmail} className="contact-form">
           <input

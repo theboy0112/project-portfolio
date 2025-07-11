@@ -1,14 +1,21 @@
-import React from "react";
 import qg from "./assets/qg.png";
+import React, { useEffect } from "react";
 import bone from "./assets/bone.png";
 import smackies from "./assets/smackies.png";
 import as from "./assets/as.png";
 import mysqll from "./assets/mysqll.png";
-import react from "./assets/react.png";
 import php from "./assets/php.png";
+import crab from "./assets/crab.png";
+import fire from "./assets/fire.png";
 import "./CSS/project.css";
+import 'animate.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Project() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
     <div className="projects-section">
       <div className="card-container">
@@ -71,6 +78,40 @@ function Project() {
 
               <img src={php} />
 
+              <img src={mysqll} />
+            </div>
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-image">
+            <img src={crab} alt="CRAB" />
+          </div>
+          <div className="card-content">
+            <h5 className="card-title">Crab Detection App</h5>
+            <p className="card-description">
+              A YOLO-based crab detection system trained using annotated images
+              from Roboflow and deployed via Google Colab for real-time and
+              image-based object detection.
+            </p>
+            <div className="card-buttons">
+              <img src={as} />
+            </div>
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-image">
+            <img src={fire} alt="FIRE" />
+          </div>
+          <div className="card-content">
+            <h5 className="card-title">Crab Detection App</h5>
+            <p className="card-description">
+              A mobile-based firearm detection system using Android Studio,
+              integrated with a PHP backend and MySQL database to detect and log
+              firearm presence from camera input in real-time.
+            </p>
+            <div className="card-buttons">
+              <img src={as} />
+              <img src={php} />
               <img src={mysqll} />
             </div>
           </div>
