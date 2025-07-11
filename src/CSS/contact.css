@@ -39,7 +39,6 @@
   position: relative;
   z-index: 1;
 }
-
 .form-section {
   background: rgba(36, 27, 27, 0.95);
   backdrop-filter: blur(15px);
@@ -52,7 +51,6 @@
   margin-bottom: 50px;
   position: relative;
 }
-
 .contact-form {
   display: flex;
   flex-direction: column;
