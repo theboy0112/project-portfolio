@@ -16,7 +16,7 @@ function Home() {
 
   useEffect(() => {
     typedInstance.current = new Typed(typedRef.current, {
-      strings: ["Hello, I'm Clifbelle!"],
+      strings: ["Hello, I'm Clifbelle!", "Computer Science Student", "Aspiring Frontend Developer"],
       typeSpeed: 50,
       backSpeed: 25,
       loop: true,
@@ -29,7 +29,7 @@ function Home() {
 
   return (
     <div className="home-background">
-      <div style={{ backgroundColor: "transparent" }}>
+      <div style={{  backgroundColor: "transparent" }}>
         <nav>
           <ul className="nav-list">
             <li className="nav-item">

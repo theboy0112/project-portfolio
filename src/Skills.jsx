@@ -107,8 +107,7 @@ function Skills() {
         <div className="description-container">
           <h3 className="skill-title">{hoveredTitle || "Select a skill"}</h3>
           <p className="skill-description">
-            {hoveredDescription ||
-              "Hover over or tap on a skill card to see its description."}
+            {hoveredDescription}
           </p>
         </div>
         <div className="cards-container">

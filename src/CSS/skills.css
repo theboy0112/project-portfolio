@@ -4,7 +4,6 @@
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
-  background: transparent;
 }
 
 .skills-wrapper {
@@ -82,15 +81,18 @@
 }
 
 .skill-title {
-  color: #fff;
-  font-size: 2rem;
+  color: #0a0909;
+  font-size: 3rem;
   margin-bottom: 20px;
   text-align: center;
+  
   font-weight: 600;
 }
 
 .skill-description {
+  font-size: 1px;
   color: #020101;
+  
   font-size: 1.1rem;
   line-height: 1.6;
   text-align: center;
@@ -123,7 +125,7 @@
     top: -30px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 0.4rem;
+    font-size: 1rem;
     color: #666;
     text-align: center;
     width: 100%;
@@ -209,7 +211,7 @@
     margin-bottom: 10px;
   }
   .skill-description {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 @media (max-width: 768px) {
