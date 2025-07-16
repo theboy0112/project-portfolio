@@ -6,6 +6,8 @@ import Skills from "./Skills.jsx";
 import "./CSS/App.css";
 import "./CSS/index.css";
 import "animate.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
   return (

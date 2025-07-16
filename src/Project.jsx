@@ -18,6 +18,12 @@ function Project() {
   }, []);
   return (
     <div className="projects-section">
+      <h1
+        className="animate__animated animate__rubberBand animate__infinite"
+        style={{ textAlign: "center" }}
+      >
+        MY PROJECT
+      </h1>
       <div className="card-container">
         <div className="card">
           <div className="card-image">
