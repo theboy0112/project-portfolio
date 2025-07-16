@@ -8,13 +8,13 @@ import php from "./assets/php.png";
 import crab from "./assets/crab.png";
 import fire from "./assets/fire.png";
 import "./CSS/project.css";
-import 'animate.css';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import "animate.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Project() {
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({ duration: 1000, once: false });
   }, []);
   return (
     <div className="projects-section">
@@ -22,9 +22,12 @@ function Project() {
         <div className="card">
           <div className="card-image">
             <img src={qg} alt="QuickGas" />
+            <h5 style={{ marginTop: "50px" }} className="card-title">
+              QuickGas MIS
+            </h5>
           </div>
-          <div className="card-content">
-            <h5 className="card-title">QuickGas MIS</h5>
+
+          <div className="card-overlay">
             <p className="card-description">
               QuickGas MIS is a smart Management Information System for
               efficiently managing LPG orders, deliveries, and customer data in
@@ -41,9 +44,12 @@ function Project() {
         <div className="card">
           <div className="card-image">
             <img src={bone} alt="BOHECO" />
+            <h5 style={{ marginTop: "50px" }} className="card-title">
+              BOHECO I Billing Portal
+            </h5>
           </div>
-          <div className="card-content">
-            <h5 className="card-title">BOHECO I Billing Portal</h5>
+
+          <div className="card-overlay">
             <p className="card-description">
               BOHECO I Billing Portal is an online platform that lets customers
               easily view their electric bills, check account balances, and
@@ -65,9 +71,11 @@ function Project() {
         <div className="card">
           <div className="card-image">
             <img src={smackies} alt="Smackies" />
+            <h5 style={{ marginTop: "50px" }} className="card-title">
+              Smackies
+            </h5>
           </div>
-          <div className="card-content">
-            <h5 className="card-title">Smackies</h5>
+          <div className="card-overlay">
             <p className="card-description">
               Smackies is a local ordering and delivery app in Calape that
               offers quick and easy access to snacks, drinks, and meals from
@@ -85,9 +93,11 @@ function Project() {
         <div className="card">
           <div className="card-image">
             <img src={crab} alt="CRAB" />
+            <h5 style={{ marginTop: "50px" }} className="card-title">
+              Crab Detection App
+            </h5>
           </div>
-          <div className="card-content">
-            <h5 className="card-title">Crab Detection App</h5>
+          <div className="card-overlay">
             <p className="card-description">
               A YOLO-based crab detection system trained using annotated images
               from Roboflow and deployed via Google Colab for real-time and
@@ -101,9 +111,11 @@ function Project() {
         <div className="card">
           <div className="card-image">
             <img src={fire} alt="FIRE" />
+            <h5 style={{ marginTop: "50px" }} className="card-title">
+              Crab Detection App
+            </h5>
           </div>
-          <div className="card-content">
-            <h5 className="card-title">Crab Detection App</h5>
+          <div className="card-overlay">
             <p className="card-description">
               A mobile-based firearm detection system using Android Studio,
               integrated with a PHP backend and MySQL database to detect and log

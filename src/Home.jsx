@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import skills from "./assets/skills.png";
 import project from "./assets/project.png";
 import home from "./assets/home.png";
@@ -11,6 +11,15 @@ import "animate.css";
 function Home() {
   const typedRef = useRef(null);
   const typedInstance = useRef(null);
+  const [darkMode, setDarkMode] = useState(true);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
+  useEffect(() => {
+    document.body.className = darkMode ? "dark" : "light";
+  }, [darkMode]);
 
   useEffect(() => {
     typedInstance.current = new Typed(typedRef.current, {
@@ -21,13 +30,15 @@ function Home() {
     });
 
     return () => {
-      typedInstance.current.destroy();
+      if (typedInstance.current) {
+        typedInstance.current.destroy();
+      }
     };
   }, []);
 
   return (
     <div className="home-background">
-      <div style={{  backgroundColor: "transparent" }}>
+      <div style={{ backgroundColor: "transparent" }}>
         <nav>
           <ul className="nav-list">
             <li className="nav-item">
@@ -56,9 +67,14 @@ function Home() {
             </li>
 
             <li className="nav-item">
-              <a href="#contactt" className="button">
-                <img src={message} alt="Contactt" />
+              <a href="#contact" className="button">
+                <img src={message} alt="Contact" />
                 <span className="label">Email</span>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="button" onClick={toggleDarkMode}>
+                {darkMode ? "🧔🏻‍♀️" : "🧔🏿‍♀️"}
               </a>
             </li>
           </ul>

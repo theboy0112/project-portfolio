@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from "react";
 import education from "./assets/education.png";
 import experience from "./assets/experience.png";
 import "./CSS/profile.css";
-import "animate.css"
+import "animate.css";
+;
 
 function Profile() {
   const calendarRef = useRef(null);
@@ -14,7 +15,6 @@ function Profile() {
       });
     }
   }, []);
-
   return (
     <div className="container profile-responsive">
       <div className="profile-info">
@@ -27,6 +27,7 @@ function Profile() {
           Student Intern at Allied Care Experts Medical Center Bohol
         </h4>
       </div>
+
       <div className="calendar-wrapper">
         <div className="calendar" ref={calendarRef}>
           Loading contributions...

@@ -32,7 +32,6 @@
     width: 100%;
     max-width: 100%;
   }
-  
   .container-profile-responsive {
     margin-bottom: 40px;
     padding-bottom: 30px;
@@ -66,7 +65,6 @@
   text-align: center;
   font-size: 16px;
   color: #1a1a1a;
-
   border-radius: 12px;
   box-sizing: border-box;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
