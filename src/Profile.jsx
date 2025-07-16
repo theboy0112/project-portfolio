@@ -4,44 +4,62 @@ import experience from "./assets/experience.png";
 import "./CSS/profile.css";
 import "animate.css";
 function Profile() {
-  const calendarRef = useRef(null);
+const calendarRef = useRef(null);
 
-  useEffect(() => {
-    if (calendarRef.current && window.GitHubCalendar) {
-      window.GitHubCalendar(calendarRef.current, "theboy0112", {
-        responsive: true,
-      });
+useEffect(() => {
+  if (calendarRef.current && window.GitHubCalendar) {
+    window.GitHubCalendar(calendarRef.current, "theboy0112", {
+      responsive: true,
+    });
 
-      setTimeout(() => {
-        const days = calendarRef.current.querySelectorAll(
-          ".ContributionCalendar-day"
-        );
+    setTimeout(() => {
+      const days = calendarRef.current.querySelectorAll(
+        ".ContributionCalendar-day"
+      );
 
-        days.forEach((day) => {
-          const date = day.getAttribute("data-date");
+      days.forEach((day) => {
+        const date = day.getAttribute("data-date");
 
-          day.addEventListener("mouseenter", function (e) {
-            const tooltip = document.createElement("div");
-            tooltip.className = "calendar-tooltip";
-            tooltip.innerText = date;
-            document.body.appendChild(tooltip);
+        day.addEventListener("mouseenter", function () {
+          const tooltip = document.createElement("div");
+          tooltip.className = "calendar-tooltip";
 
-            const rect = day.getBoundingClientRect();
-            tooltip.style.top = `${rect.top - 30}px`;
-            tooltip.style.left = `${rect.left + rect.width / 2}px`;
+         
+          const dateObj = new Date(date);
+          const formatted = dateObj.toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
           });
 
-          day.addEventListener("mouseleave", function () {
-            const tooltip = document.querySelector(".calendar-tooltip");
-            if (tooltip) tooltip.remove();
-          });
-          day.addEventListener("click", function () {
-            alert("Date: " + date);
-          });
+          tooltip.innerText = formatted;
+          document.body.appendChild(tooltip);
+
+          const rect = day.getBoundingClientRect();
+          tooltip.style.top = `${rect.top - 30}px`;
+          tooltip.style.left = `${rect.left + rect.width / 2}px`;
         });
-      }, 1500);
-    }
-  }, []);
+
+        day.addEventListener("mouseleave", function () {
+          const tooltip = document.querySelector(".calendar-tooltip");
+          if (tooltip) tooltip.remove();
+        });
+
+        day.addEventListener("click", function () {
+         
+          const dateObj = new Date(date);
+          const formatted = dateObj.toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          });
+          alert("Date: " + formatted);
+        });
+      });
+    }, 1500);
+  }
+}, []);
+
   return (
     <div className="container profile-responsive">
       <div className="profile-info">
