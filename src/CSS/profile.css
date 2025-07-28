@@ -14,7 +14,9 @@
   width: 100%;
   max-width: 500px;
 }
-
+h5{
+  text-align:justify;
+}
 .container-profile-responsive {
   margin-bottom: 60px;
   padding-bottom: 40px;

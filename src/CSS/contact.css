@@ -22,7 +22,12 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
   animation: shimmer 3s infinite;
 }
 .typed-title {
@@ -43,7 +48,7 @@
   padding: 2rem;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  max-width: 500px;
+  max-width: 400px;
   margin: 0 auto;
   margin-bottom: 50px;
   position: relative;
@@ -94,7 +99,11 @@
   box-sizing: border-box;
   resize: vertical;
 }
-
+.social-icons button:hover {
+  border-radius: 45px;
+  filter: drop-shadow(0 0 10px rgb(255, 0, 0))
+  drop-shadow(0 0 20px rgb(255, 0, 0)) drop-shadow(0 0 30px rgb(255, 0, 0));
+}
 .form-textarea:focus {
   outline: none;
   border-color: #667eea;
@@ -102,12 +111,10 @@
   transform: translateY(-2px);
   background: rgba(255, 255, 255, 1);
 }
-
 .form-textarea::placeholder {
   color: #999;
   font-weight: 400;
 }
-
 .submit-button {
   padding: 1rem 2rem;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -122,12 +129,10 @@
   position: relative;
   overflow: hidden;
 }
-
 .submit-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
 }
-
 .submit-button:active {
   transform: translateY(0);
 }
@@ -138,17 +143,22 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
   transition: left 0.5s;
 }
-.social-icons{
+.social-icons {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.social-icons button{
-    background-color: transparent;
-    border: backdrop-filter (0, 0, 20px)
+.social-icons button {
+  background-color: transparent;
+  border: backdrop-filter (0, 0, 20px);
 }
 .honeypot {
   display: none !important;
@@ -156,13 +166,11 @@
   position: absolute !important;
   left: -9999px !important;
 }
-
 .submit-button:disabled {
   opacity: 0.7;
   cursor: not-allowed;
   transform: none;
 }
-
 @media (max-width: 768px) {
   .contact-container {
     padding: 1rem 0.5rem;
@@ -186,10 +194,8 @@
   .submit-button {
     padding: 0.9rem 1.8rem;
     font-size: 3rem;
-    
   }
 }
-
 @media (max-width: 480px) {
   .contact-container {
     padding: 0.5rem;
@@ -228,22 +234,18 @@
     transform: translateY(0);
   }
 }
-
 .form-section {
   animation: fadeInUp 0.8s ease-out;
 }
-
 .typed-section {
   animation: fadeInUp 0.6s ease-out;
 }
-
 .form-input:focus,
 .form-textarea:focus {
   animation: fadeInUp 0.3s ease-out;
 }
-
 @media (max-width: 768px) {
   html {
-    font-size: 10px;
+    font-size: 8px;
   }
 }

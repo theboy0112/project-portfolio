@@ -19,10 +19,10 @@ function Project() {
   return (
     <div className="projects-section">
       <h1
-        className="animate__animated animate__rubberBand animate__infinite"
-        style={{ textAlign: "center" }}
+        className="wew animate__animated animate__rubberBand animate__infinite"
+        style={{ color: 'black',textAlign: "center" }}
       >
-        MY PROJECT
+        My Projects
       </h1>
       <div className="card-container">
         <div className="card">
@@ -98,27 +98,9 @@ function Project() {
         </div>
         <div className="card">
           <div className="card-image">
-            <img src={crab} alt="CRAB" />
-            <h5 style={{ marginTop: "50px" }} className="card-title">
-              Crab Detection App
-            </h5>
-          </div>
-          <div className="card-overlay">
-            <p className="card-description">
-              A YOLO-based crab detection system trained using annotated images
-              from Roboflow and deployed via Google Colab for real-time and
-              image-based object detection.
-            </p>
-            <div className="card-buttons">
-              <img src={as} />
-            </div>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-image">
             <img src={fire} alt="FIRE" />
             <h5 style={{ marginTop: "50px" }} className="card-title">
-              Crab Detection App
+              Dangerous Object Detection App
             </h5>
           </div>
           <div className="card-overlay">

@@ -25,7 +25,7 @@ function Home() {
     typedInstance.current = new Typed(typedRef.current, {
       strings: ["Hello, I'm Clifboy!", "Computer Science Student"],
       typeSpeed: 50,
-      backSpeed: 25,
+      backSpeed: 200,
       loop: true,
     });
 
@@ -82,7 +82,10 @@ function Home() {
       </div>
       <br />
       <div className="icons-container">
-        <span style={{ color: "black" }} ref={typedRef}></span>
+        <span
+          style={{ fontSize: "50px", fontStyle: "italic", color: "black" }}
+          ref={typedRef}
+        ></span>
       </div>
     </div>
   );

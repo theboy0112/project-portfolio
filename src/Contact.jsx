@@ -1,8 +1,5 @@
 import React, { useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
-import contact from "./assets/contact.png";
-import dcc from "./assets/dcc.png";
-import email from "./assets/email.png";
 import li from "./assets/li.png";
 import gh from "./assets/gh.png";
 import "./CSS/contact.css";

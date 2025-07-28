@@ -6,10 +6,10 @@
   box-sizing: border-box;
   margin-top: 40px;
 }
-
 .card {
   position: relative;
   width: 250px;
+  cursor: pointer;
   margin: 20px;
   background-color: #b6afbd;
   height: 300px;
@@ -19,7 +19,16 @@
   display: inline-block;
   vertical-align: top;
 }
-
+h5{
+  font-style:italic;
+  text-align: center;
+}
+.wew{
+  font-style: italic;
+}
+.wew:hover{
+  text-decoration:underline;
+}
 .card-image img {
   width: 100%;
   height: auto;
@@ -29,14 +38,12 @@
   padding: 10px;
   background-color: #222;
 }
-
 .card-title {
   font-size: 18px;
   font-weight: bold;
   color: rgb(29, 22, 22);
   margin: 0;
 }
-
 .card-overlay {
   position: absolute;
   top: 0;
@@ -54,21 +61,17 @@
   text-align: center;
   transition: opacity 0.3s ease;
 }
-
 .card:hover .card-overlay {
   opacity: 1;
 }
-
 .card-description {
   font-size: 14px;
   margin-bottom: 15px;
 }
-
 .card-buttons img {
   width: 30px;
   margin: 0 6px;
 }
-
 .tech-button {
   background: #3a3a3a;
   color: #fff;
@@ -80,11 +83,9 @@
   transition: background 0.2s ease;
   white-space: nowrap;
 }
-
 .tech-button:hover {
   background: #4a4a4a;
 }
-
 .visit-button {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #fff;
@@ -97,7 +98,6 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   white-space: nowrap;
 }
-
 .visit-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);

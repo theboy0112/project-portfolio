@@ -15,6 +15,10 @@ section {
   padding: 2rem;
   box-sizing: border-box;
 }
+.nav-list .nav-item:hover{
+  border-radius: 45px;
+  filter:drop-shadow(2px 6px 10px rgb(209, 18, 43))
+}
 .icons-container {
   display: flex;
   flex-wrap: wrap;

@@ -87,7 +87,7 @@ function Skills() {
     },
   ];
 
-  // Only use active state for touch devices
+ 
   const handleCardClick = (index, card) => {
     if (isTouch) {
       if (activeCard === index) {
@@ -102,7 +102,7 @@ function Skills() {
     }
   };
 
-  // On desktop, just update the description on hover, don't set active
+  
   const handleMouseEnter = (index, card) => {
     if (!isTouch) {
       setHoveredTitle(card.title);
