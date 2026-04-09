@@ -1,69 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import education from "./assets/education.png";
 import experience from "./assets/experience.png";
 import "./CSS/profile.css";
 import "animate.css";
+
 function Profile() {
-const calendarRef = useRef(null);
-
-useEffect(() => {
-  if (calendarRef.current && window.GitHubCalendar) {
-    window.GitHubCalendar(calendarRef.current, "theboy0112", {
-      responsive: true,
-      proxy(username) {
-        return fetch(`https://api.codetabs.com/v1/proxy/?quest=https://github.com/users/${username}/contributions?t=${Date.now()}`)
-          .then(response => response.text());
-      }
-    });
-
-    setTimeout(() => {
-      const days = calendarRef.current.querySelectorAll(
-        ".ContributionCalendar-day"
-      );
-
-      days.forEach((day) => {
-        const date = day.getAttribute("data-date");
-
-        day.addEventListener("mouseenter", function () {
-          const tooltip = document.createElement("div");
-          tooltip.className = "calendar-tooltip";
-
-         
-          const dateObj = new Date(date);
-          const formatted = dateObj.toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          });
-
-          tooltip.innerText = formatted;
-          document.body.appendChild(tooltip);
-
-          const rect = day.getBoundingClientRect();
-          tooltip.style.top = `${rect.top - 30}px`;
-          tooltip.style.left = `${rect.left + rect.width / 2}px`;
-        });
-
-        day.addEventListener("mouseleave", function () {
-          const tooltip = document.querySelector(".calendar-tooltip");
-          if (tooltip) tooltip.remove();
-        });
-
-        day.addEventListener("click", function () {
-         
-          const dateObj = new Date(date);
-          const formatted = dateObj.toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          });
-          alert("Date: " + formatted);
-        });
-      });
-    }, 1500);
-  }
-}, []);
-
   return (
     <div className="container profile-responsive">
       <div className="profile-info">
@@ -78,27 +19,13 @@ useEffect(() => {
       </div>
 
       <div className="calendar-wrapper">
-        <div className="calendar" ref={calendarRef}>
-          Loading contributions...
-        </div>
-
         {/* GitHub Contribution Snake Animation */}
         <div style={{ display: "flex", justifyContent: "center", margin: "20px 0" }}>
-          <picture>
-            <source
-              media="(prefers-color-scheme: dark)"
-              srcSet="https://raw.githubusercontent.com/theboy0112/project-portfolio/output/github-snake-dark.svg"
-            />
-            <source
-              media="(prefers-color-scheme: light)"
-              srcSet="https://raw.githubusercontent.com/theboy0112/project-portfolio/output/github-snake.svg"
-            />
-            <img
-              alt="github contribution grid snake animation"
-              src="https://raw.githubusercontent.com/theboy0112/project-portfolio/output/github-snake.svg"
-              style={{ width: "100%", maxWidth: "800px" }}
-            />
-          </picture>
+          <img
+            alt="github contribution grid snake animation"
+            src="https://raw.githubusercontent.com/theboy0112/project-portfolio/output/github-snake.svg"
+            style={{ width: "100%", maxWidth: "800px" }}
+          />
         </div>
 
         <h5>
