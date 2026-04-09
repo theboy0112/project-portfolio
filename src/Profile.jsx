@@ -10,6 +10,10 @@ useEffect(() => {
   if (calendarRef.current && window.GitHubCalendar) {
     window.GitHubCalendar(calendarRef.current, "theboy0112", {
       responsive: true,
+      proxy(username) {
+        return fetch(`https://api.codetabs.com/v1/proxy/?quest=https://github.com/users/${username}/contributions?t=${Date.now()}`)
+          .then(response => response.text());
+      }
     });
 
     setTimeout(() => {
@@ -77,6 +81,26 @@ useEffect(() => {
         <div className="calendar" ref={calendarRef}>
           Loading contributions...
         </div>
+
+        {/* GitHub Contribution Snake Animation */}
+        <div style={{ display: "flex", justifyContent: "center", margin: "20px 0" }}>
+          <picture>
+            <source
+              media="(prefers-color-scheme: dark)"
+              srcSet="https://raw.githubusercontent.com/theboy0112/project-portfolio/output/github-snake-dark.svg"
+            />
+            <source
+              media="(prefers-color-scheme: light)"
+              srcSet="https://raw.githubusercontent.com/theboy0112/project-portfolio/output/github-snake.svg"
+            />
+            <img
+              alt="github contribution grid snake animation"
+              src="https://raw.githubusercontent.com/theboy0112/project-portfolio/output/github-snake.svg"
+              style={{ width: "100%", maxWidth: "800px" }}
+            />
+          </picture>
+        </div>
+
         <h5>
           Aspiring front-end developer eager to learn and grow in web
           development, with a strong interest in creating user-friendly and

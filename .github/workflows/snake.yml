@@ -1,0 +1,48 @@
+name: Generate Snake Animation
+
+on:
+  # Run automatically every 12 hours
+  schedule:
+    - cron: "0 */12 * * *"
+  
+  # Allow manual trigger from the Actions tab
+  workflow_dispatch:
+  
+  # Run on every push to the main branch
+  push:
+    branches:
+    - main
+    - master
+
+jobs:
+  generate:
+    permissions: 
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    
+    steps:
+      # Generates a snake game from your contributions graph
+      - name: Generate github-contribution-grid-snake.svg
+        uses: Platane/snk@v3
+        with:
+          # Your exact GitHub username
+          github_user_name: theboy0112
+          
+          # Generate both light and dark mode versions
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+        env:
+          # A token is required to fetch the contribution calendar from the GitHub API
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      # Pushes the generated svg files to the "output" branch
+      - name: Push SVGs to the output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          # Uses the default system token to authorize the branch push
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

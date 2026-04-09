@@ -62,12 +62,6 @@ function Skills() {
         "Object-oriented programming language known for its portability and enterprise-level applications.",
     },
     {
-      img: tailwind,
-      title: "Tailwind CSS",
-      description:
-        "Utility-first CSS framework for rapidly building custom user interfaces with pre-defined classes.",
-    },
-    {
       img: prisma,
       title: "Prisma ORM",
       description:

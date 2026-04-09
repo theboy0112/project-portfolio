@@ -19,15 +19,12 @@
   display: inline-block;
   vertical-align: top;
 }
-h5{
-  font-style:italic;
+h5 {
+  font-style: italic;
   text-align: center;
 }
-.wew{
+.wew {
   font-style: italic;
-}
-.wew:hover{
-  text-decoration:underline;
 }
 .card-image img {
   width: 100%;
@@ -95,7 +92,9 @@ h5{
   font-size: 0.95rem;
   font-weight: 500;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   white-space: nowrap;
 }
 .visit-button:hover {

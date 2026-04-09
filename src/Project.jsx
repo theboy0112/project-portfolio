@@ -5,8 +5,7 @@ import smackies from "./assets/smackies.png";
 import as from "./assets/as.png";
 import mysqll from "./assets/mysqll.png";
 import php from "./assets/php.png";
-import crab from "./assets/crab.png";
-import fire from "./assets/fire.png";
+import calapebohol from "./assets/geminicalape.png";
 import "./CSS/project.css";
 import "animate.css";
 import AOS from "aos";
@@ -20,7 +19,7 @@ function Project() {
     <div className="projects-section">
       <h1
         className="wew animate__animated animate__rubberBand animate__infinite"
-        style={{ color: 'black',textAlign: "center" }}
+        style={{ color: "black", textAlign: "center" }}
       >
         My Projects
       </h1>
@@ -98,21 +97,32 @@ function Project() {
         </div>
         <div className="card">
           <div className="card-image">
-            <img src={fire} alt="FIRE" />
+            <img
+              src={calapebohol}
+              alt="FIRE"
+              style={{ height: "150px", objectFit: "cover" }}
+            />
             <h5 style={{ marginTop: "50px" }} className="card-title">
-              Dangerous Object Detection App
+              CalapeServeQ
             </h5>
           </div>
           <div className="card-overlay">
             <p className="card-description">
-              A mobile-based firearm detection system using Android Studio,
-              integrated with a PHP backend and MySQL database to detect and log
-              firearm presence from camera input in real-time.
+              CalapeServeQ is a web-based queue management system designed for
+              the Municipality of Calape to improve efficiency, transparency,
+              and convenience in public service transactions. It allows citizens
+              to generate queue numbers online, track their status in real time,
+              and view live updates through a TV monitor display.
             </p>
             <div className="card-buttons">
-              <img src={as} />
-              <img src={php} />
-              <img src={mysqll} />
+              <button
+                className="visit-button"
+                onClick={() =>
+                  window.open("https://calapeserveq.com", "_blank")
+                }
+              >
+                Visit Page
+              </button>
             </div>
           </div>
         </div>
