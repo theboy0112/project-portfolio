@@ -6,25 +6,26 @@ import "animate.css";
 
 function Profile() {
   return (
-    <div className="container profile-responsive">
-      <div className="profile-info">
+    <div className="container" id="profile">
+      <div className="profile-info animate__animated animate__fadeInLeft">
         <h4 className="profile-edu">
           <img src={education} alt="Education" className="profile-icon" />
-          Computer Science Student
+          <span>Computer Science Student</span>
         </h4>
         <h4 className="profile-exp">
           <img src={experience} alt="Experience" className="profile-icon" />
-          Student Intern at Allied Care Experts Medical Center Bohol
+          <span>
+            Student Intern at Allied Care Experts Medical Center Bohol
+          </span>
         </h4>
       </div>
 
-      <div className="calendar-wrapper">
-        {/* GitHub Contribution Snake Animation */}
-        <div style={{ display: "flex", justifyContent: "center", margin: "20px 0" }}>
+      <div className="calendar-wrapper animate__animated animate__fadeInRight">
+        <div className="snake-container">
           <img
             alt="github contribution grid snake animation"
             src="https://raw.githubusercontent.com/theboy0112/project-portfolio/output/github-snake.svg"
-            style={{ width: "100%", maxWidth: "800px" }}
+            className="github-snake"
           />
         </div>
 
@@ -34,6 +35,7 @@ function Profile() {
           visually appealing websites.
         </h5>
       </div>
+
     </div>
   );
 }

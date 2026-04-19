@@ -1,240 +1,148 @@
 .projects-section {
   width: 100%;
-  display: block;
-  padding: 60px 0 20px 0;
-  background: transparent;
-  box-sizing: border-box;
-  margin-top: 40px;
+  padding: 100px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
+.projects-section h1 {
+  font-size: 3rem;
+  margin-bottom: 60px;
+  background: linear-gradient(to right, #fff, var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  width: 100%;
+}
+
 .card {
   position: relative;
-  width: 250px;
-  cursor: pointer;
-  margin: 20px;
-  background-color: #b6afbd;
-  height: 300px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
   overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  display: inline-block;
-  vertical-align: top;
+  height: 400px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
 }
-h5 {
-  font-style: italic;
-  text-align: center;
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent-color);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
-.wew {
-  font-style: italic;
+
+.card-image {
+  height: 200px;
+  background: var(--bg-secondary);
+  overflow: hidden;
+  position: relative;
+  transition: opacity 0.4s ease;
 }
+
+.card:hover .card-image {
+  opacity: 0;
+}
+
 .card-image img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
 }
-.card-content {
-  padding: 10px;
-  background-color: #222;
+
+.card:hover .card-image img {
+  transform: scale(1.15);
 }
+
 .card-title {
-  font-size: 18px;
-  font-weight: bold;
-  color: rgb(29, 22, 22);
-  margin: 0;
+  padding: 20px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: left !important;
+  margin: 0 !important;
+  font-style: normal !important;
+  transition: opacity 0.4s ease;
 }
+
+.card:hover .card-title {
+  opacity: 0;
+}
+
 .card-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(30, 30, 30, 0.95);
-  color: white;
+  background: var(--bg-secondary);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 30px;
   opacity: 0;
-  padding: 20px;
-  text-align: center;
-  transition: opacity 0.3s ease;
+  transition: all 0.4s ease;
+  z-index: 20;
 }
+
+
 .card:hover .card-overlay {
   opacity: 1;
 }
+
 .card-description {
-  font-size: 14px;
-  margin-bottom: 15px;
-}
-.card-buttons img {
-  width: 30px;
-  margin: 0 6px;
-}
-.tech-button {
-  background: #3a3a3a;
-  color: #fff;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: background 0.2s ease;
-  white-space: nowrap;
-}
-.tech-button:hover {
-  background: #4a4a4a;
-}
-.visit-button {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
   font-size: 0.95rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-  white-space: nowrap;
-}
-.visit-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 25px;
 }
 
-@media (max-width: 1024px) {
-  .card-container {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    padding: 16px;
-  }
-  .card-content {
-    padding: 20px;
-  }
-  .card-title {
-    font-size: 1.4rem;
-  }
-  .card-description {
-    font-size: 0.95rem;
-  }
+.card-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-buttons img {
+  width: 24px;
+  height: 24px;
+  opacity: 1;
+  transition: transform 0.3s ease;
+}
+
+.card-buttons img:hover {
+  transform: scale(1.2);
+}
+
+
+.visit-button {
+  background: var(--accent-color);
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 0 20px var(--accent-glow);
 }
 
 @media (max-width: 768px) {
-  .projects-section {
-    padding: 40px 0 16px 0;
-    margin-top: 30px;
-  }
   .card-container {
-    padding: 12px;
-  }
-  .card-image {
-    height: 180px;
-  }
-  .card-content {
-    padding: 18px;
-  }
-  .card-title {
-    font-size: 1.3rem;
-    margin-bottom: 12px;
-  }
-  .card-description {
-    font-size: 0.9rem;
-    margin-bottom: 16px;
-  }
-  .card-buttons {
-    gap: 10px;
-  }
-  .tech-button {
-    padding: 6px 12px;
-    font-size: 0.85rem;
-  }
-  .visit-button {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .projects-section {
-    padding: 30px 0 12px 0;
-    margin-top: 20px;
-  }
-  .card-container {
-    padding: 8px;
+    grid-template-columns: 1fr;
   }
   .card {
-    border-radius: 12px;
-  }
-  .card-image {
-    height: 160px;
-  }
-  .card-content {
-    padding: 16px;
-  }
-  .card-title {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-  }
-  .card-description {
-    font-size: 0.85rem;
-    margin-bottom: 14px;
-    line-height: 1.5;
-  }
-  .card-buttons {
-    gap: 8px;
-  }
-  .tech-button {
-    padding: 5px 10px;
-    font-size: 0.8rem;
-    border-radius: 6px;
-  }
-  .visit-button {
-    padding: 7px 14px;
-    font-size: 0.85rem;
-    border-radius: 6px;
+    height: 380px;
   }
 }
 
-@media (max-width: 360px) {
-  .projects-section {
-    padding: 8px 0;
-  }
-  .card-container {
-    gap: 12px;
-    padding: 4px;
-  }
-  .card-image {
-    height: 140px;
-  }
-  .card-content {
-    padding: 14px;
-  }
-  .card-title {
-    font-size: 1.1rem;
-  }
-  .card-description {
-    font-size: 0.8rem;
-  }
-  .tech-button {
-    padding: 4px 8px;
-    font-size: 0.75rem;
-  }
-  .visit-button {
-    padding: 6px 12px;
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-height: 500px) and (orientation: landscape) {
-  .projects-section {
-    padding: 10px 0;
-  }
-  .card-container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 16px;
-    padding: 4px;
-  }
-  .card-image {
-    height: 120px;
-  }
-}

@@ -10,23 +10,24 @@ import 'aos/dist/aos.css';
 
 function App() {
   return (
-    <div>
-      <section id="home">
+    <div className="main-container">
+      <section id="home" className="section">
         <Home />
       </section>
-      <section id="profile">
+      <section id="profile" className="section">
         <Profile />
       </section>
-      <section id="project">
+      <section id="project" className="section">
         <Project />
       </section>
-      <section id="skills">
+      <section id="skills" className="section">
         <Skills />
       </section>
-      <section id="contact">
+      <section id="contact" className="section">
         <Contactt />
       </section>
     </div>
+
   );
 }
 

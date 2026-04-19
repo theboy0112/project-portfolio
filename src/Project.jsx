@@ -16,49 +16,44 @@ function Project() {
     AOS.init({ duration: 1000, once: false });
   }, []);
   return (
-    <div className="projects-section">
-      <h1
-        className="wew animate__animated animate__rubberBand animate__infinite"
-        style={{ color: "black", textAlign: "center" }}
-      >
-        My Projects
-      </h1>
+    <div className="projects-section" id="project">
       <div className="card-container">
-        <div className="card">
+        <div
+          className="card animate__animated animate__fadeInUp"
+          data-aos="fade-up"
+        >
           <div className="card-image">
             <img src={qg} alt="QuickGas" />
-            <h5 style={{ marginTop: "50px" }} className="card-title">
-              QuickGas MIS
-            </h5>
           </div>
+          <h5 className="card-title">QuickGas MIS</h5>
 
           <div className="card-overlay">
             <p className="card-description">
-              QuickGas MIS is a smart Management Information System for
-              efficiently managing LPG orders, deliveries, and customer data in
-              real-time.
+              A smart Management Information System for efficiently managing LPG
+              orders, deliveries, and customer data in real-time.
             </p>
             <div className="card-buttons">
-              <img src={as} />
-              <img src={php} />
-              <img src={mysqll} />
+              <img src={as} alt="Android Studio" />
+              <img src={php} alt="PHP" />
+              <img src={mysqll} alt="MySQL" />
             </div>
           </div>
         </div>
 
-        <div className="card">
+        <div
+          className="card animate__animated animate__fadeInUp"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <div className="card-image">
             <img src={bone} alt="BOHECO" />
-            <h5 style={{ marginTop: "50px" }} className="card-title">
-              BOHECO I Billing Portal
-            </h5>
           </div>
+          <h5 className="card-title">BOHECO I Billing Portal</h5>
 
           <div className="card-overlay">
             <p className="card-description">
-              BOHECO I Billing Portal is an online platform that lets customers
-              easily view their electric bills, check account balances, and
-              access billing history.
+              An online platform that lets customers easily view their electric
+              bills, check account balances, and access billing history.
             </p>
             <div className="card-buttons">
               <button
@@ -67,52 +62,49 @@ function Project() {
                   window.open("https://boheco-billing.netlify.app/", "_blank")
                 }
               >
-                Visit Page
+                Visit Case Study
               </button>
             </div>
           </div>
         </div>
 
-        <div className="card">
+        <div
+          className="card animate__animated animate__fadeInUp"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <div className="card-image">
             <img src={smackies} alt="Smackies" />
-            <h5 style={{ marginTop: "50px" }} className="card-title">
-              Smackies
-            </h5>
           </div>
+          <h5 className="card-title">Smackies Delivery</h5>
+
           <div className="card-overlay">
             <p className="card-description">
-              Smackies is a local ordering and delivery app in Calape that
-              offers quick and easy access to snacks, drinks, and meals from
-              nearby vendors.
+              A local ordering and delivery app offering quick and easy access
+              to snacks, drinks, and meals from nearby vendors.
             </p>
             <div className="card-buttons">
-              <img src={as} />
-
-              <img src={php} />
-
-              <img src={mysqll} />
+              <img src={as} alt="Android Studio" />
+              <img src={php} alt="PHP" />
+              <img src={mysqll} alt="MySQL" />
             </div>
           </div>
         </div>
-        <div className="card">
+
+        <div
+          className="card animate__animated animate__fadeInUp"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
           <div className="card-image">
-            <img
-              src={calapebohol}
-              alt="FIRE"
-              style={{ height: "150px", objectFit: "cover" }}
-            />
-            <h5 style={{ marginTop: "50px" }} className="card-title">
-              CalapeServeQ
-            </h5>
+            <img src={calapebohol} alt="CalapeServeQ" />
           </div>
+          <h5 className="card-title">CalapeServeQ</h5>
+
           <div className="card-overlay">
             <p className="card-description">
-              CalapeServeQ is a web-based queue management system designed for
-              the Municipality of Calape to improve efficiency, transparency,
-              and convenience in public service transactions. It allows citizens
-              to generate queue numbers online, track their status in real time,
-              and view live updates through a TV monitor display.
+              A web-based queue management system designed for the Municipality
+              of Calape to improve efficiency and transparency.
             </p>
             <div className="card-buttons">
               <button
@@ -121,7 +113,7 @@ function Project() {
                   window.open("https://calapeserveq.com", "_blank")
                 }
               >
-                Visit Page
+                Launch Application
               </button>
             </div>
           </div>

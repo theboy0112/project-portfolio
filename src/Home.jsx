@@ -27,6 +27,7 @@ function Home() {
       typeSpeed: 50,
       backSpeed: 200,
       loop: true,
+      showCursor: false,
     });
 
     return () => {
@@ -38,54 +39,54 @@ function Home() {
 
   return (
     <div className="home-background">
-      <div style={{ backgroundColor: "transparent" }}>
-        <nav>
-          <ul className="nav-list">
-            <li className="nav-item">
-              <a href="#home" className="button">
-                <img src={home} alt="Home" />
-                <span className="label">Home</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#profile" className="button">
-                <img src={about} alt="Profile" />
-                <span className="label">Profile</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#project" className="button">
-                <img src={project} alt="Project" />
-                <span className="label">Projects</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#skills" className="button">
-                <img src={skills} alt="Skills" />
-                <span className="label">Skills</span>
-              </a>
-            </li>
+      <nav>
+        <ul className="nav-list">
+          <li className="nav-item">
+            <a href="#home" className="button">
+              <img src={home} alt="Home" />
+              <span className="label">Home</span>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="#profile" className="button">
+              <img src={about} alt="Profile" />
+              <span className="label">Profile</span>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="#project" className="button">
+              <img src={project} alt="Project" />
+              <span className="label">Projects</span>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="#skills" className="button">
+              <img src={skills} alt="Skills" />
+              <span className="label">Skills</span>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="#contact" className="button">
+              <img src={message} alt="Contact" />
+              <span className="label">Contact</span>
+            </a>
+          </li>
+          <li className="nav-item">
+            <button
+              className="button"
+              style={{ border: "none", background: "none", padding: "8px" }}
+              onClick={toggleDarkMode}
+            >
+              <span style={{ fontSize: "20px" }}>{darkMode ? "🧔🏻‍♀️" : "🧔🏿‍♀️"}</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
 
-            <li className="nav-item">
-              <a href="#contact" className="button">
-                <img src={message} alt="Contact" />
-                <span className="label">Email</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="button" onClick={toggleDarkMode}>
-                {darkMode ? "🧔🏻‍♀️" : "🧔🏿‍♀️"}
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <br />
-      <div className="icons-container">
-        <span
-          style={{ fontSize: "50px", fontStyle: "italic", color: "black" }}
-          ref={typedRef}
-        ></span>
+      <div className="hero-content animate__animated animate__fadeIn">
+        <h1 className="hero-title animate__animated animate__pulse animate__infinite">
+          <span ref={typedRef}></span>
+        </h1>
       </div>
     </div>
   );

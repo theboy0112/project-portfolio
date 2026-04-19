@@ -9,6 +9,11 @@ import as from "./assets/as.png";
 import mysql from "./assets/mysqll.png";
 import graphql from "./assets/graphql.png";
 import prisma from "./assets/prisma.png";
+import expressjs from "./assets/expressjs.png";
+import nodejs from "./assets/nodejs.png";
+import postgre from "./assets/postgre.png";
+import typescript from "./assets/typescript.png";
+import postman from "./assets/postman.png";
 import "./CSS/skills.css";
 
 function Skills() {
@@ -78,6 +83,36 @@ function Skills() {
       title: "MySQL Database",
       description:
         "Relational database management system for storing, organizing, and retrieving structured data.",
+    },
+    {
+      img: nodejs,
+      title: "Node.js",
+      description:
+        "A JavaScript runtime built on Chrome's V8 JavaScript engine, used for building fast and scalable network applications.",
+    },
+    {
+      img: expressjs,
+      title: "Express.js",
+      description:
+        "A minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.",
+    },
+    {
+      img: postgre,
+      title: "PostgreSQL",
+      description:
+        "A powerul, open-source object-relational database system with a strong reputation for reliability, feature robustness, and performance.",
+    },
+    {
+      img: typescript,
+      title: "TypeScript",
+      description:
+        "A strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.",
+    },
+    {
+      img: postman,
+      title: "Postman",
+      description:
+        "An API platform for building and using APIs, simplifying each step of the API lifecycle and streamlining collaboration.",
     },
   ];
 
