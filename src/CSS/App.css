@@ -57,6 +57,7 @@ nav {
 .nav-list {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 12px;
   padding: 0;
   margin: 0;
@@ -106,6 +107,66 @@ nav {
   letter-spacing: 0.05em;
   color: var(--text-primary);
   opacity: 0.9;
+}
+
+/* Logo Styles */
+.logo-item {
+  border-right: 1px solid var(--glass-border);
+  padding-right: 12px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-color);
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  font-size: 1.2rem;
+}
+
+.logo-icon {
+  font-size: 1.4rem;
+  filter: drop-shadow(0 0 8px var(--accent-glow));
+}
+
+.logo-text {
+  background: linear-gradient(135deg, var(--accent-color), #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Theme Toggle Styles */
+.theme-toggle {
+  background: none !important;
+  border: none !important;
+  padding: 8px !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.theme-toggle:hover {
+  transform: rotate(15deg) scale(1.1) !important;
+  box-shadow: none !important;
+}
+
+.sun-icon {
+  color: #fbbf24;
+  filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.5));
+  font-size: 1.2rem;
+}
+
+.moon-icon {
+  color: #6366f1;
+  filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.5));
+  font-size: 1.2rem;
 }
 
 
@@ -242,6 +303,13 @@ nav {
   }
   .nav-item .label {
     display: none;
+  }
+  .logo-text {
+    display: none;
+  }
+  .logo-item {
+    margin-right: 4px;
+    padding-right: 8px;
   }
   .nav-item .button {
     padding: 8px;

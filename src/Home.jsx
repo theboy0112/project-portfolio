@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSun, faMoon, faCode } from "@fortawesome/free-solid-svg-icons";
 import skills from "./assets/skills.png";
 import project from "./assets/project.png";
 import home from "./assets/home.png";
@@ -11,14 +13,23 @@ import "animate.css";
 function Home() {
   const typedRef = useRef(null);
   const typedInstance = useRef(null);
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(() => {
+    const savedTheme = localStorage.getItem("theme");
+    return savedTheme ? savedTheme === "dark" : false; // Default to Light Mode
+  });
 
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
+    setDarkMode((prev) => {
+      const newMode = !prev;
+      localStorage.setItem("theme", newMode ? "dark" : "light");
+      return newMode;
+    });
   };
 
   useEffect(() => {
-    document.body.className = darkMode ? "dark" : "light";
+    const theme = darkMode ? "dark" : "light";
+    document.body.className = theme;
+    document.documentElement.className = theme;
   }, [darkMode]);
 
   useEffect(() => {
@@ -41,6 +52,12 @@ function Home() {
     <div className="home-background">
       <nav>
         <ul className="nav-list">
+          <li className="nav-item logo-item">
+            <div className="logo-wrapper">
+              <FontAwesomeIcon icon={faCode} className="logo-icon" />
+              <span className="logo-text">BOY</span>
+            </div>
+          </li>
           <li className="nav-item">
             <a href="#home" className="button">
               <img src={home} alt="Home" />
@@ -73,11 +90,14 @@ function Home() {
           </li>
           <li className="nav-item">
             <button
-              className="button"
-              style={{ border: "none", background: "none", padding: "8px" }}
+              className="button theme-toggle"
               onClick={toggleDarkMode}
+              title={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
             >
-              <span style={{ fontSize: "20px" }}>{darkMode ? "🧔🏻‍♀️" : "🧔🏿‍♀️"}</span>
+              <FontAwesomeIcon
+                icon={darkMode ? faSun : faMoon}
+                className={darkMode ? "sun-icon" : "moon-icon"}
+              />
             </button>
           </li>
         </ul>

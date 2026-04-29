@@ -16,6 +16,21 @@
     <link rel="icon" type="image/svg+xml" href="/icon.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clifbelle Portfolio</title>
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+          document.documentElement.classList.add(savedTheme);
+          // Also set on body for compatibility with existing CSS
+          document.addEventListener("DOMContentLoaded", () => {
+            document.body.classList.add(savedTheme);
+          });
+        } else {
+          // Default to light
+          document.documentElement.classList.add("light");
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
